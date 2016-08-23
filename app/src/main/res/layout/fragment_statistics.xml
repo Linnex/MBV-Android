@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/summary"
+            android:textColor="@color/colorBase"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/dashboard_stat_type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:entries="@array/stat_type" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layerType="software"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_dotted_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardUseCompatPadding="true"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="right">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_number_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="13"
+                            android:textColor="@color/colorBase"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Total Loans"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_number_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="3"
+                            android:textColor="@color/colorBase"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Lent"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_number_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="10"
+                            android:textColor="@color/colorBase"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_name_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Borrowed"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_transaction_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/na"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="40sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_borrow_white"
+                                android:tint="@android:color/darker_gray" />
+
+                            <TextView
+                                android:id="@+id/dashboard_credit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:padding="5dp"
+                                android:text="@string/na"
+                                android:textColor="@android:color/holo_green_light"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_lend_white"
+                                android:tint="@android:color/darker_gray" />
+
+                            <TextView
+                                android:id="@+id/dashboard_debit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:padding="5dp"
+                                android:text="@string/na"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.github.lzyzsd.circleprogress.ArcProgress
+                        android:id="@+id/dashboard_arc_progress"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:arc_finished_color="@color/colorAmber"
+                        app:arc_progress="55"
+                        app:arc_suffix_text=""
+                        app:arc_text_color="@color/colorPrimary"
+                        app:arc_unfinished_color="@color/colorPrimary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_roi_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="14.3%"
+                            android:textColor="@color/colorBase"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_roi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Avg. Interest"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_default_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textColor="@color/colorBase"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/dashboard_summary_default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Defaults"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dashboard_view_transaction_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_rounded_gray"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_white_24dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/view_transactions"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <WebView
+                        android:id="@+id/dashboard_graph_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+                    <ProgressBar
+                        android:id="@+id/dashboard_graph_loader"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

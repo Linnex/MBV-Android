@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="AppTheme.NoActionBar">
+                <item name="windowActionBar">false</item>
+                <item name="windowNoTitle">true</item>
+                <item name="android:spinnerItemStyle">@style/AppSpinnerItem</item>
+        </style>
+
+        <style name="SignUpTheme.NoActionBar">
+                <item name="windowActionBar">false</item>
+                <item name="windowNoTitle">true</item>
+                <item name="android:spinnerItemStyle">@style/AppSplashSpinnerItem</item>
+        </style>
+
+        <style name="SplashEdditext">
+                <item name="android:gravity">center</item>
+                <item name="android:layout_margin">10dp</item>
+                <item name="android:textColor">@android:color/white</item>
+                <item name="android:textColorHint">@android:color/white</item>
+                <item name="android:singleLine">true</item>
+                <item name="android:fontFamily">sans-serif-light</item>
+                <item name="android:background">@android:color/transparent</item>
+        </style>
+
+        <style name="SignUpTextView">
+                <item name="android:gravity">center</item>
+                <item name="android:textColor">@android:color/white</item>
+                <item name="android:fontFamily">sans-serif-light</item>
+                <item name="android:drawablePadding">5dp</item>
+        </style>
+
+        <style name="AppSplashSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+                <item name="android:textAppearance">@style/AppSplashTextAppearanceSpinnerItem</item>
+        </style>
+
+        <style name="AppSplashTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+                <item name="android:textColor">@android:color/white</item>
+                <item name="android:fontFamily">sans-serif-light</item>
+                <item name="android:textSize">18sp</item>
+        </style>
+
+        <style name="AppSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+                <item name="android:textAppearance">@style/AppTextAppearanceSpinnerItem</item>
+        </style>
+
+        <style name="AppTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+                <item name="android:textColor">@color/colorBaseDark</item>
+                <item name="android:fontFamily">sans-serif-light</item>
+                <item name="android:textSize">20sp</item>
+        </style>
+
+        <style name="FilterOptionTextView">
+                <item name="android:textColor">@color/colorPrimary</item>
+                <item name="android:fontFamily">sans-serif-condensed</item>
+                <item name="android:textSize">18sp</item>
+        </style>
+
+        <style name="EmptyListTextView">
+                <item name="android:textColor">@android:color/darker_gray</item>
+                <item name="android:fontFamily">sans-serif-condensed</item>
+                <item name="android:textSize">18sp</item>
+                <item name="android:padding">20dp</item>
+                <item name="android:gravity">center</item>
+        </style>
+
+        <style name="AppTextInputLayout" parent="@android:style/TextAppearance">
+                <item name="android:textColor">@android:color/white</item>
+                <item name="android:textSize">14sp</item>
+                <item name="android:gravity">center</item>
+                <item name="android:fontFamily">sans-serif-condensed</item>
+        </style>
+
+</resources>

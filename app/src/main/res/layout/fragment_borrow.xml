@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/borrow_selector_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/select_tenure"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/borrow_teneure"
+                style="@style/AppSpinnerItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:entries="@array/months_temp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="mPokket Money\nAvailed"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/borrow_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="₹550"
+                        android:textColor="@color/colorBase"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="mPokket Money\nDisbursed"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="₹500"
+                        android:textColor="@color/colorBase"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/borrow_user_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/remarks"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textColor="@color/colorBaseDark"
+                android:textColorHint="@color/colorBaseDark" />
+
+            <EditText
+                android:id="@+id/borrow_user_referral_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/referral_code"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textColor="@color/colorBaseDark"
+                android:textColorHint="@color/colorBaseDark" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/borrow_get_quote_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_main_btn"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:text="@string/get_quote"
+                android:textColor="@color/colorBaseDark" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/borrow_quote_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:translationY="500dp"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/borrow_repayment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:listSelector="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/borrow_submit_loan_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/submit_loan_request"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

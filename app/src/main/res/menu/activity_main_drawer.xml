@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:title="@string/title_dashboard"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_lend"
+            android:title="@string/title_lend"
+            android:icon="@mipmap/ic_lend_white"/>
+        <item
+            android:id="@+id/nav_borrow"
+            android:title="@string/title_borrow"
+            android:icon="@mipmap/ic_borrow_white"/>
+        <item
+            android:id="@+id/nav_manage_wallet"
+            android:title="@string/title_wallet"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"/>
+    </group>
+
+    <group
+        android:id="@+id/menu_middle">
+        <item
+            android:id="@+id/nav_transaction_history"
+            android:title="@string/title_transaction_history"
+            android:icon="@drawable/ic_history_white_24dp"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/title_settings"
+            android:icon="@drawable/ic_account_circle_black_48dp"/>
+        <item
+            android:id="@+id/nav_contact"
+            android:title="@string/title_contact_us"
+            android:icon="@drawable/ic_forum_black_24dp"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/title_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom">
+        <item
+            android:id="@+id/nav_rate_us"
+            android:title="@string/title_rate_us"
+            android:icon="@drawable/ic_stars_black_24dp"/>
+    </group>
+
+</menu>

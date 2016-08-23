@@ -1,0 +1,390 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profile_update_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_account_circle_white_48dp"
+                android:padding="3dp"
+                android:cropToPadding="true"
+                android:background="@drawable/shape_oval_color_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/profile_update_name"
+                    style="@style/AddressEdditext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext" />
+
+                <Button
+                    android:id="@+id/profile_update_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_base_dark"
+                    android:drawableLeft="@drawable/ic_cake_white_24dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="5dp"
+                    android:text="DOB"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_face_white_24dp"
+                android:tint="@color/colorBase" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="Gender"
+                android:textColor="@color/colorBaseDark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/profile_update_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:entries="@array/gender" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wc_white_24dp"
+                android:tint="@color/colorBase" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="Marital"
+                android:textColor="@color/colorBaseDark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/profile_update_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:entries="@array/marital_status" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_business_center_white_24dp"
+                android:tint="@color/colorBase" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="Employment"
+                android:textColor="@color/colorBaseDark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/profile_update_employment_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:entries="@array/employment_status" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_white_24dp"
+                android:tint="@color/colorBase" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="Current Residence"
+                android:textColor="@color/colorBaseDark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/profile_update_residential_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:entries="@array/residential_status" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_update_home_address_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Home Address"
+                    android:textColor="@color/colorBaseDark"
+                    android:textSize="18sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/profile_update_home_street_address"
+                    style="@style/AddressEdditext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street Address"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext"
+                    android:ems="5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/profile_update_home_city"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="City"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/profile_update_home_state"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="State"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/profile_update_home_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_edittext_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="Pincode"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBaseDark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_update_current_address_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Current Address"
+                    android:textColor="@color/colorBaseDark"
+                    android:textSize="18sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/profile_update_current_street_address"
+                    style="@style/AddressEdditext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street Address"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext"
+                    android:ems="10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/profile_update_current_city"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="City"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/profile_update_current_state"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="State"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext" />
+
+                    <EditText
+                        android:id="@+id/profile_update_current_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_edittext_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="Pincode"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBaseDark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/profile_update_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_main_btn"
+            android:enabled="true"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="10dp"
+            android:text="@string/yup_its_me"
+            android:textColor="@color/colorBaseDark" />
+
+    </LinearLayout>
+
+</ScrollView>

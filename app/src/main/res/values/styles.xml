@@ -1,0 +1,125 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TransparentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="SignUpTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SignUpTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:spinnerItemStyle">@style/AppSplashSpinnerItem</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:spinnerItemStyle">@style/AppSpinnerItem</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashEdditext" >
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SignUpTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:drawablePadding">5dp</item>
+    </style>
+
+    <style name="SignUpSpinner">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppFilterSpinner">
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppSplashSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/AppSplashTextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="AppSplashTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/AppTextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="AppTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorBaseDark</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="FilterOptionTextView">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AddressEdditext" >
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/colorBaseDark</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textPostalAddress</item>
+        <item name="android:background">@drawable/shape_edittext_bg</item>
+    </style>
+
+    <style name="EmptyListTextView">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">#CC000000</item>
+        <item name="sv_showcaseColor">@android:color/white</item>
+        <item name="sv_buttonText">OK</item>
+        <item name="sv_tintButtonColor">true</item>
+        <item name="sv_detailTextColor">@android:color/white</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+    </style>
+
+    <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">@color/colorAmber</item>
+    </style>
+
+</resources>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lend_filters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/filter_by"
+                        android:textSize="16sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/lend_active_filters_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center_vertical"
+                            android:text="None"
+                            android:textSize="18sp" />
+
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/content_borrow_edit_quote_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_oval_color_primary"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_create_black_24dp"
+                    android:tint="@android:color/white" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/lend_refresh_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:refreshType="material">
+
+            <ListView
+                android:id="@+id/lend_request_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/shape_dotted_line"
+                android:dividerHeight="3dp"
+                android:layerType="software"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin" />
+
+        </com.baoyz.widget.PullRefreshLayout>
+
+        <TextView
+            android:id="@+id/lend_empty_list"
+            style="@style/EmptyListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_search"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/loans_empty"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lend_no_connection"
+            style="@style/EmptyListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_error"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/connection_error"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lend_filter_option_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        card_view:cardBackgroundColor="@color/colorPrimaryDark"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/filter_by"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/lend_close_filter_options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/shape_oval_color_primary"
+                    android:src="@mipmap/ic_close" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/shape_dotted_line"
+                android:layerType="software" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <TextView
+                            style="@style/FilterOptionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="@string/loan_amount" />
+
+                        <Spinner
+                            android:id="@+id/lend_filter_by_amount"
+                            style="@style/AppFilterSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/filter_product" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <TextView
+                            style="@style/FilterOptionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Gender" />
+
+                        <Spinner
+                            android:id="@+id/lend_filter_by_gender"
+                            style="@style/AppFilterSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/filter_gender" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <TextView
+                            style="@style/FilterOptionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="@string/posted_on" />
+
+                        <Spinner
+                            android:id="@+id/lend_filter_by_created_on"
+                            style="@style/AppFilterSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/posted_on" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:gravity="bottom">
+
+                        <TextView
+                            style="@style/FilterOptionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="@string/loan_id" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/lend_filter_loan_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="@string/loan_id_hint"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/shape_dotted_line"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="Clear Filters"
+                    android:textColor="@color/colorBaseDark"
+                    android:textSize="24sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBaseDark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="Filter"
+                    android:textColor="@color/colorBaseDark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

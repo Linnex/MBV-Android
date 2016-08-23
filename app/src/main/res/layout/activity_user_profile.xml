@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/user_profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/na"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/user_profile_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/na"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/user_profile_dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/na"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/TransparentTheme" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <!--
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_stars_black_24dp"
+            android:visibility="gone"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end"
+            />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_profile_detials_rating_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="4.3"
+                    android:textColor="@color/colorBase"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Avg. Rating"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_profile_detials_default_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:textColor="@color/colorBase"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Defaults"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_profile_detials_timeline_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="45dp"/>
+
+    <LinearLayout
+        android:id="@+id/splash_promo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="India's only P2P marketplace\nfor students who need\npocket money."
+            android:textColor="@android:color/white"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="60dp"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/splash_login_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/splash_sign_in_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_white_btn"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:text="Sign In"
+                android:textColor="@drawable/selector_white_text_toggle" />
+
+            <Button
+                android:id="@+id/splash_sign_up_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_white_btn"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:text="Sign Up"
+                android:textColor="@drawable/selector_white_text_toggle" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/splash_sign_up_facebook_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_white_btn"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="10dp"
+            android:text="Connect With Facebook"
+            android:textColor="@drawable/selector_white_text_toggle"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

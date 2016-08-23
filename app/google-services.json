@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_id": "mpokket",
+    "project_number": "959885967378",
+    "name": "mPokket"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959885967378:android:b6ac9c70ac603157",
+        "client_id": "android:com.mbv.pokket",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.mbv.pokket",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-75606741-1"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/timeline_refresh_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:refreshType="material">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dashboard_timeline_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </com.baoyz.widget.PullRefreshLayout>
+
+    <TextView
+        android:id="@+id/timeline_empty_list"
+        style="@style/EmptyListTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_timeline"
+        android:text="@string/timeline_empty"/>
+
+</RelativeLayout>

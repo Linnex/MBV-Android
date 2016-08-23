@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/query"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/contact_query_type_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:entries="@array/issue_type" />
+
+                <TextView
+                    android:id="@+id/contact_loan_id_lable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/ref_id"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <Spinner
+                    android:id="@+id/contact_loan_id_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:entries="@array/issue_type"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-light"
+                android:gravity="start"
+                android:hint="Your query..."
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:textColor="@color/colorBaseDark"
+                android:textColorHint="@color/colorBaseDark"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_main_btn"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:text="@string/send"
+                android:textColor="@color/colorBaseDark" />
+        </LinearLayout>
+
+</LinearLayout>

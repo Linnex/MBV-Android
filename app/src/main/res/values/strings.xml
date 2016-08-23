@@ -1,0 +1,190 @@
+<resources>
+    <string name="endpoint">http://staging.mpokket.com:8080/mpokket/api/</string>
+    <string name="app_name">mPokket</string>
+    <string name="rupee">₹</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="my_profile">My Profile</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="facebook_connect">Connect With Facebook</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="registered_email">Registered Email</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="go_back">Go Back</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">Verify OTP</string>
+    <string name="generate_otp">Generate OTP</string>
+    <string name="yup_its_me">Yup It\'s Me</string>
+    <string name="na">NA</string>
+    <string name="select_amount">Select Amount</string>
+    <string name="select_tenure">Select Period</string>
+    <string name="loan_details">Loan Details</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="loan_tenure">Loan Tenure</string>
+    <string name="note">Note</string>
+    <string name="summary">Summary</string>
+    <string name="submit_loan_request">Submit Loan Request</string>
+    <string name="remarks">Notes (Optional)</string>
+    <string name="payment_due">Payments Due</string>
+    <string name="repayments_due">Repayments Due</string>
+    <string name="repayment_schedule">Repayment Schedule</string>
+    <string name="installment_number">Installment No.</string>
+    <string name="ref_id">Ref. ID:</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="get_quote">Get Quote</string>
+    <string name="borrower">Borrower</string>
+    <string name="lender">Lender</string>
+    <string name="loan_id">Loan ID</string>
+    <string name="borrower_name_hint">Example: Alok</string>
+    <string name="borrower_location">Borrower Location</string>
+    <string name="borrower_location_hint">Example: Kolkata</string>
+    <string name="age">Age</string>
+    <string name="age_hint">Example: 21</string>
+    <string name="loan_id_hint">Example: AD134ADD12SX</string>
+    <string name="posted_on">Posted On</string>
+    <string name="filter_by">Filter By</string>
+    <string name="view_transactions">View Transactions</string>
+    <string name="query">Query</string>
+    <string name="send">Send</string>
+    <string name="loading">Loading....</string>
+    <string name="wallet_setup">Wallet Setup</string>
+    
+    <string name="msg_mobile_otp_main">Sit back and relax, while we verify your mobile number.</string>
+    <string name="msg_mobile_otp_secondary">Enter the OTP code manually, in case we fail to detect SMS automatically.</string>
+    <string name="msg_sign_up_main">Almost Done</string>
+    <string name="msg_sign_up_secondary">Just check if we got your profile info correct. If not please do let us know!</string>
+
+    <string name="screen1_title">Welcome to mPokket!</string>
+    <string name="screen1_desc">India\'s only P2P marketplace that connects students who need pocket money with those willing to provide funds.</string>
+    <string name="screen2_title">For Students</string>
+    <string name="screen2_desc">Get cash anytime, anywhere!\nWe make sure your emergencies are fulfilled by connecting you with our vast network of lenders.</string>
+    <string name="screen3_title">For Lenders</string>
+    <string name="screen3_desc">Our platforms provides robust security and minimizes default risks, to make sure your money is handed to the right person and ensure on-time repayment.</string>
+    <string name="timeline_empty">\nKind of lonely here.\n\nCheck if you are still connected to the internet!\n\nTAP TO REFRESH</string>
+    <string name="events_empty">\n\nNo upcoming dues or payments :)\n\nTAP TO REFRESH</string>
+    <string name="content_empty">\n\nNothing here!\nPress + to add content.\n\nTAP TO REFRESH</string>
+    <string name="loans_empty">\n\nThere are no open requests.\n\nCheck back later!</string>
+    <string name="records_empty">\n\nNo record(s) found.</string>
+    <string name="connection_error">\n\nNo internet connection.</string>
+    <string name="wallet_setup_details">Enter your wallet transaction password.\nThis is required to complete any transaction and making modifications to your wallet.</string>
+    <string name="loan_success_detials">Your request has been placed successfully and will be processed shortly. We will notify you via email as a confirmation of the money transfer.</string>
+
+    <array name="stat_type">
+        <item>All</item>
+        <item>Lent</item>
+        <item>Borrowed</item>
+    </array>
+
+    <array name="posted_on">
+        <item>All</item>
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>This Week</item>
+        <item>This Month</item>
+    </array>
+
+    <array name="issue_type">
+        <item>General</item>
+        <item>Loan</item>
+        <item>Wallet</item>
+    </array>
+
+    <array name="filter_product">
+        <item>All</item>
+        <item>₹ 550 | 1 Month</item>
+        <item>₹ 590 | 2 Months</item>
+        <item>₹ 620 | 3 Months</item>
+    </array>
+
+    <array name="filter_gender">
+        <item>All</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </array>
+
+    <array name="months_temp">
+        <item>1 Month</item>
+        <item>2 Month</item>
+        <item>3 Month</item>
+    </array>
+
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </array>
+
+    <array name="marital_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+        <item>Separated</item>
+        <item>Widowed</item>
+    </array>
+
+    <array name="employment_status">
+        <item>Student</item>
+        <item>Unemployed</item>
+        <item>Salaried</item>
+        <item>Self-Employed</item>
+    </array>
+
+    <array name="residential_status">
+        <item>Owned</item>
+        <item>Rental</item>
+        <item>Parental</item>
+        <item>Temporary Sharing</item>
+        <item>Hostel</item>
+    </array>
+
+    <array name="educational_degree">
+        <item>Bachelors</item>
+        <item>Masters</item>
+        <item>Diploma</item>
+        <item>Professional Education</item>
+    </array>
+
+    <array name="kyc_array">
+        <item>PAN</item>
+        <item>Adhaar</item>
+        <item>Passport</item>
+        <item>Voter ID</item>
+        <item>Bank Passbook</item>
+        <item>Student ID</item>
+    </array>
+
+    <array name="months_array">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </array>
+
+    <string name="title_dashboard">Home</string>
+    <string name="title_lend">Give Cash</string>
+    <string name="title_borrow">Get Cash</string>
+    <string name="title_wallet">Wallet</string>
+    <string name="title_contact_us">Contact Us</string>
+    <string name="title_settings">My Profile</string>
+    <string name="title_rate_us">Rate Us</string>
+    <string name="title_logout">Logout</string>
+    <string name="title_transaction_history">Transaction History</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+</resources>

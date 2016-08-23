@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_update_current_address_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                card_view:cardCornerRadius="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/educational_details_institute_name"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="Institution Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:singleLine="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/educational_details_degree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:entries="@array/educational_degree" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/educational_details_degree_name"
+                            style="@style/AddressEdditext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="1"
+                            android:hint="Degree Name"
+                            android:inputType="textCapWords"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/educational_details_year_of_joining"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_base_dark"
+                            android:drawableLeft="@drawable/ic_event_white_24dp"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:text="Year Of Joining"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/educational_details_year_of_passing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_base_dark"
+                            android:drawableLeft="@drawable/ic_event_white_24dp"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:text="Year of Passing"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/educational_details_description"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        android:inputType="textCapSentences" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/educational_details_city"
+                            style="@style/AddressEdditext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="City"
+                            android:inputType="textCapWords" />
+
+                        <EditText
+                            android:id="@+id/educational_details_state"
+                            style="@style/AddressEdditext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="State"
+                            android:inputType="textCapWords" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/educational_details_pincode"
+                        style="@style/AddressEdditext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pincode"
+                        android:inputType="number"
+                        android:maxLength="6" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Optional Info:"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/educational_details_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:hint="Score"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBaseDark" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/add_educational_details_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:cropToPadding="true"
+                    android:background="@drawable/shape_edittext_bg"
+                    android:scaleType="centerCrop" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/add_educational_details_capture_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:src="@drawable/ic_camera"
+                    app:elevation="6dp"
+                    app:pressedTranslationZ="12dp"
+                    app:rippleColor="@color/colorBase"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

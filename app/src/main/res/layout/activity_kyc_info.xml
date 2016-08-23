@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_update_current_address_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/kyc_details_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:entries="@array/kyc_array" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_margin="10dp"
+                android:text="Selected ID type serves for the following proof:"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/kyc_detials_proof_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:drawableLeft="@drawable/ic_face_black_24dp"
+                    android:gravity="center"
+                    android:text="Identity"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/kyc_detials_proof_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:drawableLeft="@drawable/ic_store_black_24dp"
+                    android:gravity="center"
+                    android:text="Address"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/kyc_detials_proof_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:drawableLeft="@drawable/ic_assignment_ind_black_24dp"
+                    android:gravity="center"
+                    android:text="Student"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/kyc_details_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColorHint="@color/colorBaseDark"
+                android:background="@drawable/shape_edittext_bg"
+                android:textColor="@color/colorBaseDark"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:inputType="textCapCharacters"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/kyc_details_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_edittext_bg"
+            android:scaleType="centerCrop" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/kyc_details_take_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_camera"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/colorBase"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

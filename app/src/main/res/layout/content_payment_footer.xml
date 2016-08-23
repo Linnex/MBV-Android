@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:layerType="software">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_dotted_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Disbursement Amount"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/content_borrow_disbursement_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="₹500"
+            android:textColor="@color/colorBase"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_borrow_tax_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Service Tax"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/content_borrow_tax_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="₹23.34"
+            android:textColor="@color/colorBase"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_borrow_other_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="App Usage Fee"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/content_borrow_other_charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="₹6.75"
+            android:textColor="@color/colorBase"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_borrow_loyalty_fee_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Loyalty Fee"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/content_borrow_loyalty_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="₹6.75"
+            android:textColor="@color/colorBase"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Total"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/content_borrow_total_loan_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="₹576.75"
+            android:textColor="@color/colorBase"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mbv.pokket" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission android:name="com.mbv.pokket.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.mbv.pokket.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".MBVApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ActivitySplash"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityUserSignIn" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityUserSignUp" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityProfileSettings" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityMobileOTP" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityEducationDetails" android:label="Add Education Information" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityKYCDetails" android:label="Add KYC Information" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityBankAccountDetails" android:label="Add Bank Account" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityAppIntro" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityCompleteSignUp" android:theme="@style/SignUpTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityWalletSetup" android:theme="@style/SignUpTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActivityTransactionHistory" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityLoanDetails" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityViewUserProfile" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ContactActivity" android:label="@string/title_contact_us" android:theme="@style/SignUpTheme.NoActionBar"/>
+        <receiver android:name="com.mbv.pokket.util.SMSReceiver">
+            <intent-filter >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".services.AppGCMListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.AppInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

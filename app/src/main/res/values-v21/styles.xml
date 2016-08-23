@@ -1,0 +1,48 @@
+<resources>>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:spinnerItemStyle">@style/AppSpinnerItem</item>
+    </style>
+
+    <style name="SignUpTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:spinnerItemStyle">@style/AppSplashSpinnerItem</item>
+    </style>
+
+    <style name="AppSplashSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/AppSplashTextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="AppSplashTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/AppTextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="AppTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorBaseDark</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AddressEdditext" >
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/colorBaseDark</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textPostalAddress</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:background">@drawable/shape_edittext_bg</item>
+    </style>
+
+</resources>
